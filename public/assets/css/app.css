@@ -1,0 +1,425 @@
+@media (max-height: 600px) {
+  .footer {
+    position: relative !important;
+    float: left !important;
+    left: 0px !important;
+  }
+  .about .lyssa-pic {
+    height: 450px !important;
+  }
+  .about .left-nav {
+    height: 450px !important;
+  }
+  .body-container {
+    height: 100% !important;
+    overflow: hidden;
+  }
+  .gallery .gallery-frame {
+    height: 500px !important;
+    width: 500px !important;
+  }
+  .gallery .left-nav {
+    height: 500px !important;
+  }
+}
+@media (max-width: 1080px) {
+  .header-top-right {
+    display: none !important;
+  }
+  .header-container,
+  .body-container,
+  .footer {
+    max-width: 100% !important;
+  }
+}
+@media (max-width: 904px) {
+  .about .left-nav {
+    display: none !important;
+  }
+  .footer {
+    position: relative !important;
+    float: left !important;
+    left: 0px !important;
+  }
+  .about .body-container {
+    width: auto !important;
+    padding: 0px 20px;
+  }
+  .about .text-title {
+    font-size: 45px !important;
+  }
+}
+@media (max-width: 840px) {
+  .track {
+    margin-left: 20px !important;
+  }
+}
+@media (max-width: 770px) {
+  .body-container {
+    height: auto !important;
+  }
+  .about .lyssa-pic {
+    margin: 15px auto !important;
+    width: 100% !important;
+    height: 420px !important;
+    text-align: center;
+  }
+  .about .text-title {
+    text-align: center !important;
+  }
+  .header-title {
+    font-size: 0.75em !important;
+  }
+  .header,
+  .header-container {
+    height: 80px !important;
+  }
+  .header-logo {
+    width: 90px !important;
+    height: 80px !important;
+  }
+  .gallery .left-nav {
+    display: none !important;
+  }
+  .gallery .top-nav {
+    display: block !important;
+  }
+  .gallery .gallery-frame {
+    background-image: none !important;
+    background-color: #f2f2f2;
+    height: auto !important;
+    width: auto !important;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    border-bottom-color: #d8d8d8;
+  }
+  .gallery .gallery-frame img {
+    padding: 10px;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  .gallery .gallery-frame .gallery-frame-details {
+    padding: 3px 15px !important;
+  }
+  .gallery .item {
+    display: block !important;
+  }
+  .track {
+    display: none !important;
+  }
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Palanquin", sans-serif;
+}
+.fp_sq_container div {
+  display: none;
+}
+img {
+  max-height: 100%;
+  width: auto;
+}
+.main-container {
+  position: relative;
+  max-width: 1024px;
+  margin: auto;
+  min-height: 100%;
+}
+.header {
+  max-width: 100%;
+  height: 120px;
+  margin: 0;
+  padding: 0;
+}
+.header .header-logo {
+  float: left;
+  width: 120px;
+  height: 100%;
+}
+.header .header-about {
+  background-image: url('/images/about_header_bg.jpg');
+  background-repeat: no-repeat;
+}
+.header .header-gallery {
+  background-image: url('/images/gallery_header_bg.jpg');
+  background-repeat: no-repeat;
+}
+.header .header-container {
+  position: relative;
+  font-size: 4em;
+  text-align: right;
+  color: #ffffff;
+  float: left;
+  width: 904px;
+  height: 120px;
+}
+.header .header-container .header-title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  line-height: 80%;
+}
+.header .header-top-right {
+  position: absolute;
+  left: 904px;
+  top: 0px;
+}
+.body-container {
+  float: left;
+  height: 100%;
+  width: 904px;
+  display: none;
+}
+.body-container .left-nav,
+.body-container .top-nav {
+  float: left;
+  width: 120px;
+  height: 100%;
+  background-image: url('/images/left_nav_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+}
+.body-container .left-nav ul,
+.body-container .top-nav ul {
+  width: 500px;
+  list-style-type: none;
+  margin-left: -205px;
+  margin-top: 25px;
+}
+.body-container .left-nav ul .active,
+.body-container .top-nav ul .active {
+  pointer-events: none;
+  cursor: default;
+}
+.body-container .left-nav ul .active a,
+.body-container .top-nav ul .active a {
+  color: #CCC;
+}
+.body-container .left-nav ul li,
+.body-container .top-nav ul li {
+  float: left;
+  margin-left: 20px;
+}
+.body-container .left-nav ul li a,
+.body-container .top-nav ul li a {
+  color: #999;
+  font-style: italic;
+  cursor: pointer !important;
+  font-size: 1.2em;
+}
+.body-container .top-nav {
+  width: 100%;
+  height: auto;
+  display: none;
+  background-image: none !important;
+  background-color: #f2f2f2;
+}
+.body-container .top-nav ul {
+  width: auto !important;
+  margin: 0 !important;
+  padding: 10px 15px 0px 0px;
+  float: right !important;
+}
+.body-container .lyssa-pic {
+  float: left;
+  height: 100%;
+  width: auto;
+  margin-right: 30px;
+}
+.body-container .lyssa-pic img {
+  height: 100%;
+}
+.body-container .text-title {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0.6;
+  font-size: 4.3em;
+  text-align: right;
+  color: #f4f3f3;
+}
+.body-container .text-content {
+  max-width: 100%;
+  font-style: italic;
+  font-size: 0.9em;
+  text-align: justify;
+  text-justify: distribute;
+  text-indent: 30px;
+  color: #4a4a4a;
+  max-height: 100%;
+  margin: 15px 0px 30px 0px;
+}
+.body-container .gallery-frame {
+  background-image: url('/images/gallery_frame.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float: right;
+}
+.body-container .gallery-frame .item {
+  display: none;
+}
+.body-container .gallery-frame .active {
+  display: block;
+}
+.body-container .gallery-frame img {
+  width: 80%;
+  margin-left: 3.4%;
+  margin-top: 3.4%;
+}
+.body-container .gallery-frame .gallery-frame-details {
+  padding: 15px;
+}
+.body-container .gallery-frame .gallery-frame-details .gallery-details-name {
+  color: #d8d8d8;
+  line-height: 0;
+  font-size: 25px;
+}
+.body-container .gallery-frame .gallery-frame-details .gallery-details-year {
+  font-style: italic;
+}
+.body-container .gallery-frame .gallery-frame-details .gallery-details-description {
+  color: #999;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 0;
+  position: relative;
+  top: -1px;
+}
+.body-container .gallery-frame .gallery-frame-details .gallery-details-size {
+  line-height: 0;
+  font-size: 10px;
+  position: relative;
+  top: -5px;
+}
+.footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 904px;
+  height: 45px;
+  background-image: url('/images/footer_bg.jpg');
+  background-repeat: no-repeat;
+  padding: 10px 20px;
+}
+.footer p {
+  color: #999;
+  text-align: right;
+  line-height: 1.8;
+}
+.rotate-left {
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg);
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+.rotate-right {
+  /* Safari */
+  -webkit-transform: rotate(90deg);
+  /* Firefox */
+  -moz-transform: rotate(90deg);
+  /* IE */
+  -ms-transform: rotate(90deg);
+  /* Opera */
+  -o-transform: rotate(90deg);
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+.track {
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 320px;
+  margin-left: 90px;
+  margin-top: 65px;
+}
+.track .view-port {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  float: left;
+  position: relative;
+}
+.track .slider-container {
+  position: relative;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+}
+.track .item {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+.track .pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 0px;
+  border-radius: 0px;
+}
+.track a.prev,
+.track a.next {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 33%;
+  margin-top: -32px;
+  height: 64px;
+  width: 35px;
+  background: url("/images/arrows.png");
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+.track a.next {
+  top: initial;
+  bottom: -15px;
+  background-position: -64px 0;
+}
+.track a.prev {
+  top: -15px;
+  margin-top: 0;
+  background-position: -29px 0;
+}
+.track a.prev.disabled,
+.track a.next.disabled {
+  display: block;
+  pointer-events: none;
+  cursor: default;
+}
+.track a.unclickable {
+  pointer-events: none;
+  cursor: default;
+}
+.track a.prev:hover {
+  background-position: -29px -66px;
+}
+.track a.prev:active {
+  background-position: -29px -132px;
+}
+.track a.next:hover {
+  background-position: -64px -132px;
+}
+.track a.next:active {
+  background-position: -64px -198px;
+}
+.desaturate {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+/*# sourceMappingURL=app.css.map */
