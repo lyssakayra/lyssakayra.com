@@ -18,13 +18,13 @@
             <img src="/images/fp_sq_news_1.jpg"> 
         </div>
         <div class="fp_sq_news_2 fp_sq_2">
-            <a href="#"><img src="/images/fp_sq_news_2.jpg"></a> 
+            <a href="/news"><img src="/images/fp_sq_news_2.jpg"></a> 
         </div>
         <div class="fp_sq_contact_1 fp_sq_1">
             <img src="/images/fp_sq_contact_1.jpg">
         </div>
         <div class="fp_sq_contact_2 fp_sq_2">
-            <a href="#"><img src="/images/fp_sq_contact_2.jpg"></a>
+            <a href="/contact"><img src="/images/fp_sq_contact_2.jpg"></a>
         </div>  
     </div>
 

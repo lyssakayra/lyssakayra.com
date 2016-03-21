@@ -50,7 +50,7 @@ $(window).load(function () {
             'top': marginTop+1,
             'left': centerX - imgHeight,
         });
-        $(".fp_sq_gallery_1").fadeIn();
+        $(".fp_sq_gallery_1").show();
 
         $(".fp_sq_about_1").css({
             'position': 'absolute',
@@ -59,7 +59,7 @@ $(window).load(function () {
             'top': marginTop+1,
             'left': centerX,
         });
-        $(".fp_sq_about_1").delay(500).fadeIn();
+        $(".fp_sq_about_1").show();
 
         $(".fp_sq_news_1").css({
             'position': 'absolute',
@@ -68,7 +68,7 @@ $(window).load(function () {
             'top': centerY,
             'left': centerX - imgHeight,
         });
-        $(".fp_sq_news_1").delay(1000).fadeIn();
+        $(".fp_sq_news_1").show();
 
         $(".fp_sq_contact_1").css({
             'position': 'absolute',
@@ -77,7 +77,9 @@ $(window).load(function () {
             'top': centerY,
             'left': centerX,
         });
-        $(".fp_sq_contact_1").delay(1500).fadeIn();    
+        $(".fp_sq_contact_1").show();
+        
+        $('body').fadeIn(1000);
     }
 
     function inOutAnim(element) {
@@ -130,7 +132,7 @@ $(window).load(function () {
     );
     $(".fp_sq_2").mouseleave(function() {
         $(this).prev().removeClass('active');
-        $(this).fadeOut(1000);
+        $(this).fadeOut(500);
       }
     );
 });

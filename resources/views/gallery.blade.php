@@ -59,15 +59,15 @@
                 <div class="item item-1">
                     <img src="/images/gallery_india.jpg">
                     <div class="gallery-frame-details">
-                        <span class="gallery-details-name">INDIA</span><span class="gallery-details-year">2015</span><br>
-                        <span class="gallery-details-description">acrylic and resin on wood</span><br>
+                        <span class="gallery-details-name">ANJUNA TEXTILE, INDIA</span><span class="gallery-details-year">2015</span><br>
+                        <span class="gallery-details-description">acrylic, gold leaf and resin on wood</span><br>
                         <span class="gallery-details-size"> 4' by 4'</span>
                     </div>
                 </div>
                 <div class="item item-2">
                     <img src="/images/gallery_white.jpg">
                     <div class="gallery-frame-details">
-                        <span class="gallery-details-name">WHITE</span><span class="gallery-details-year">2015</span><br>
+                        <span class="gallery-details-name">FES TANNERIES SOUTH</span><span class="gallery-details-year">2015</span><br>
                         <span class="gallery-details-description">acrylic and resin on wood</span><br>
                         <span class="gallery-details-size"> 4' by 4'</span>
                     </div>
@@ -75,7 +75,7 @@
                 <div class="item item-3">
                     <img src="/images/gallery_morocco.jpg">
                     <div class="gallery-frame-details">
-                        <span class="gallery-details-name">MOROCCO</span><span class="gallery-details-year">2015</span><br>
+                        <span class="gallery-details-name">FES TANNERIES NORTH</span><span class="gallery-details-year">2015</span><br>
                         <span class="gallery-details-description">acrylic and resin on wood</span><br>
                         <span class="gallery-details-size"> 4' by 4'</span>
                     </div>
@@ -83,7 +83,7 @@
                 <div class="item item-4">
                     <img src="/images/gallery_berlin.jpg">
                     <div class="gallery-frame-details">
-                        <span class="gallery-details-name">BERLIN</span><span class="gallery-details-year">2015</span><br>
+                        <span class="gallery-details-name">BERLIN WALL</span><span class="gallery-details-year">2015</span><br>
                         <span class="gallery-details-description">acrylic and resin on wood</span><br>
                         <span class="gallery-details-size"> 4' by 4'</span>
                     </div>
@@ -99,7 +99,7 @@
                 <div class="item item-6">
                     <img src="/images/gallery_vancouver.jpg">
                     <div class="gallery-frame-details">
-                        <span class="gallery-details-name">VANCOUVER</span><span class="gallery-details-year">2015</span><br>
+                        <span class="gallery-details-name">VANCOUVER'S WINTER</span><span class="gallery-details-year">2015</span><br>
                         <span class="gallery-details-description">acrylic and resin on wood</span><br>
                         <span class="gallery-details-size"> 4' by 4'</span>
                     </div>

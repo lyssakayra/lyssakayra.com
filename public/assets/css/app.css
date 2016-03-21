@@ -5,21 +5,30 @@
     left: 0px !important;
   }
   .about .lyssa-pic {
-    height: 450px !important;
+    height: 435px !important;
   }
   .about .left-nav {
-    height: 450px !important;
+    height: 435px !important;
   }
   .body-container {
     height: 100% !important;
     overflow: hidden;
   }
   .gallery .gallery-frame {
-    height: 500px !important;
-    width: 500px !important;
+    height: 435px !important;
+    width: 435px !important;
   }
   .gallery .left-nav {
-    height: 500px !important;
+    height: 435px !important;
+  }
+  .gallery .track {
+    margin-left: 125px;
+  }
+  .contact form {
+    height: 435px !important;
+  }
+  .contact .left-nav {
+    height: 435px !important;
   }
 }
 @media (max-width: 1080px) {
@@ -33,7 +42,8 @@
   }
 }
 @media (max-width: 904px) {
-  .about .left-nav {
+  .about .left-nav,
+  .contact .left-nav {
     display: none !important;
   }
   .footer {
@@ -42,16 +52,24 @@
     left: 0px !important;
   }
   .about .body-container {
-    width: auto !important;
     padding: 0px 20px;
   }
   .about .text-title {
     font-size: 45px !important;
   }
+  .contact .body-container form {
+    padding-right: 20px !important;
+  }
+  .contact .body-container .social-media {
+    padding-left: 20px !important;
+  }
 }
 @media (max-width: 840px) {
   .track {
     margin-left: 20px !important;
+  }
+  .contact .body-container form {
+    width: 330px;
   }
 }
 @media (max-width: 770px) {
@@ -107,6 +125,15 @@
   .track {
     display: none !important;
   }
+  .contact .body-container form {
+    padding: 20px;
+    float: left !important;
+    width: 100% !important;
+  }
+  .contact .body-container .social-media {
+    padding: 7px !important;
+    width: 100% !important;
+  }
 }
 html,
 body {
@@ -114,6 +141,9 @@ body {
   padding: 0;
   height: 100%;
   font-family: "Palanquin", sans-serif;
+}
+body {
+  display: none;
 }
 .fp_sq_container div {
   display: none;
@@ -145,6 +175,10 @@ img {
 }
 .header .header-gallery {
   background-image: url('/images/gallery_header_bg.jpg');
+  background-repeat: no-repeat;
+}
+.header .header-contact {
+  background-image: url('/images/contact_header_bg.jpg');
   background-repeat: no-repeat;
 }
 .header .header-container {
@@ -420,6 +454,87 @@ img {
 .desaturate {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+}
+.contact form {
+  padding: 73px 0px 0px 20px;
+  float: right;
+  height: 100%;
+  width: 400px;
+}
+.contact form .btn-primary {
+  color: #fff;
+  background-color: #000000;
+  border: 0px;
+  border-radius: 4px;
+  padding: 9px 20px;
+  float: left;
+}
+.contact form .success {
+  float: left;
+  margin-left: 10px;
+  color: #337ab7;
+  line-height: 33px;
+}
+.contact form .form-control {
+  margin-bottom: 15px;
+}
+.contact form .error {
+  border-color: #EB4242;
+}
+.contact .text-title {
+  font-size: 2.3em;
+  margin-bottom: 15px;
+}
+.contact .social-media {
+  float: left;
+  padding: 60px 0px 0px 20px;
+}
+.contact .social-media a:link,
+.contact .social-media a:hover,
+.contact .social-media a:visited,
+.contact .social-media a:active {
+  text-decoration: none;
+  color: #333;
+}
+.contact .social-media .social-media-link {
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 13px;
+  border-radius: 3px;
+}
+.contact .social-media .social-media-link .link-icon {
+  width: 60px;
+  display: inline-block;
+  float: left;
+  font-size: 18px;
+}
+.contact .social-media .social-media-link .link-icon .icon-back {
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  padding: 11px;
+  text-align: center;
+}
+.contact .social-media .social-media-link .link-icon .icon-back i {
+  font-size: 27px;
+  margin-top: 1px;
+}
+.contact .social-media .social-media-link .link-text {
+  display: inline-block;
+  float: left;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 0.95em;
+}
+.body-container {
+  background-image: url('/images/background_1.jpg');
+  background-position: right bottom;
 }
 
 /*# sourceMappingURL=app.css.map */

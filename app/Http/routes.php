@@ -11,17 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/about', function () {
-    return view('about');
-});
 
-Route::get('/gallery', function () {
-    return view('gallery');
-});
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,5 +28,19 @@ Route::get('/gallery', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
+    Route::get('/about', function () {
+        return view('about');
+    });
+
+    Route::get('/gallery', function () {
+        return view('gallery');
+    });
+    Route::get('contact', ['as' => 'contact', function () {
+        return view('contact');
+    }]);    
+    Route::post('contact_request','ContactController@getContactUsForm');
 });

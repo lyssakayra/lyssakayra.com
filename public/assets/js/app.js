@@ -14,6 +14,7 @@ function resetFp(window) {
 }
 $(window).load(function () {
     resetFp(window); 
+    $('body').fadeIn(1000);
 
     var container = $(".my-track");
     var track = container.find(".slider-container").silverTrack({
