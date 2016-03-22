@@ -28,19 +28,26 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    if (env('COMING_SOON') == true) {
+        Route::get('/', function () {
+            return view('coming_soon');
+        });        
+    } else {
+        Route::get('/', function () {
+            return view('welcome');
+        });
 
-    Route::get('/about', function () {
-        return view('about');
-    });
+        Route::get('/about', function () {
+            return view('about');
+        });
 
-    Route::get('/gallery', function () {
-        return view('gallery');
-    });
-    Route::get('contact', ['as' => 'contact', function () {
-        return view('contact');
-    }]);    
-    Route::post('contact_request','ContactController@getContactUsForm');
+        Route::get('/gallery', function () {
+            return view('gallery');
+        });
+        Route::get('contact', ['as' => 'contact', function () {
+            return view('contact');
+        }]);    
+        Route::post('contact_request','ContactController@getContactUsForm');        
+    }
+
 });

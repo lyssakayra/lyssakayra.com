@@ -27,6 +27,7 @@ $(window).load(function () {
     $("body").trigger("mousemove");
 
     function resetFp() {
+        $('body').hide();
         $('.fp_sq_2').fadeOut();
 
         width = $(window).width();
