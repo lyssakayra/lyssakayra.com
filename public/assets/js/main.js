@@ -1,6 +1,6 @@
 idleTimer = null;
 idleState = false;
-idleWait = 10000;
+idleWait = 3000;
 
 $(window).load(function () {
 
@@ -10,7 +10,7 @@ $(window).load(function () {
 
         if (idleState == true) { 
             // Reactivated event
-            resetFp();          
+            resetFp();         
         }
         
         idleState = false;
@@ -19,7 +19,7 @@ $(window).load(function () {
             idleState = true; 
             if ($(".active").length == 0) {
                 // Idle Event
-                showMenuItems();               
+                showMenuItems();             
             }
         }, idleWait);
     });
@@ -41,8 +41,6 @@ $(window).load(function () {
             imgHeight = parseInt(centerY*0.90);
             marginTop = parseInt(centerY*0.10);
         }
-
-
 
         $(".fp_sq_gallery_1").css({
             'position': 'absolute',

@@ -41,9 +41,8 @@ Route::group(['middleware' => ['web']], function () {
             return view('about');
         });
 
-        Route::get('/gallery', function () {
-            return view('gallery');
-        });
+        Route::get('/gallery', 'GalleryController@show');
+        Route::get('/gallery/{colleciton_id}', 'GalleryController@show');
         Route::get('contact', ['as' => 'contact', function () {
             return view('contact');
         }]);    

@@ -13,6 +13,8 @@ function resetFp(window) {
 
 }
 $(window).load(function () {
+    var zoom = $(".gallery-frame .active img");
+    zoom.elevateZoom({ zoomType   : "inner", cursor: "crosshair" });
     resetFp(window); 
     $('body').fadeIn(1000);
 
@@ -32,31 +34,43 @@ $(window).load(function () {
     track.start();
 
     $("a.next, a.prev").on('click', function() {
+        // remove only the "zoom" elevateZoom
+        zoom.data().elevateZoom.zoomContainer.remove(); //remove specific .zoomContainer
+        $.removeData(zoom, 'elevateZoom'); //remove data from img
         button = $(this);
-        galleryFrame = $(".body-container").find(".gallery-frame");
-        galleryFrame.children('.item').each(function() {
-            $(this).removeClass('active');
-        });
-        sliderContainer = container.find(".slider-container");
-        sliderContainerPos = sliderContainer.position();
-        sliderContainer.children('.item').each(function(i) {
-            $(this).find('img').addClass('desaturate');
-            $(this).find('img').addClass('desaturate');
-            itemPos = $(this).position();
-            if ((-1*sliderContainerPos.top+220 == itemPos.top && button.hasClass('next'))
-                ||(-1*sliderContainerPos.top == itemPos.top && button.hasClass('prev'))) {
-                $(this).find('img').removeClass('desaturate');
-                itemClass = $(this).attr('class').split(' ');
-                itemClass = "."+$(itemClass).get(-1);
-                galleryFrame.find(itemClass).addClass('active');
-            }
-        });
-        if (-1 * sliderContainer.height() == sliderContainerPos.top - 440 && $(this).hasClass('next')) {
-            $("a.next").addClass('unclickable');
-        } else {
-            $("a.next").removeClass('unclickable');
-        }
+        button.addClass('unclickable');
+        galleryFrame = $(".body-container .gallery-frame");
+        galleryFrameActive = galleryFrame.children('.active');
+        galleryFrame.children('.item').removeClass('active');
 
+        sliderContainer = $(".slider-container");
+        sliderContainerPos = sliderContainer.position();
+        sliderContainerActive = sliderContainer.children(".active");
+        sliderContainer.children('.item').removeClass('active');
+        sliderContainer.children('.item').find('img').addClass('desaturate');
+
+        if (button.hasClass('next')) {
+            galleryNext = galleryFrameActive.next();
+            sliderNext = sliderContainerActive.next();
+        } else {
+            sliderNext = sliderContainerActive.prev();
+            galleryNext = galleryFrameActive.prev();
+        }
+        galleryNext.addClass('active');
+        sliderNext.addClass('active');
+        sliderNext.find('img').removeClass('desaturate');
+        setTimeout(function() {
+            if (button.hasClass('next') && !galleryNext.is(':last-child')) {
+                $("a.prev").removeClass('unclickable'); 
+                button.removeClass('unclickable');                
+            }
+            if (button.hasClass('prev') && !galleryNext.is(':first-child')) {
+                $("a.next").removeClass('unclickable'); 
+                button.removeClass('unclickable');                
+            } 
+        }, 200)
+        zoom = $(".gallery-frame .active img");
+        zoom.elevateZoom({ zoomType   : "inner", cursor: "-webkit-zoom-in" });
     });
 
     $(window).on('resize', function(){
@@ -64,4 +78,4 @@ $(window).load(function () {
     });
 
 });
-  
+

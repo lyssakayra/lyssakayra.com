@@ -19,27 +19,37 @@
         <div class="body-container">
             <div class="left-nav">
                 <ul class="rotate-left">
-                  <li class=""><a href="">previous work</a></li>
-                  <li class="active"><a href="">tree rings</a></li>
+                    @foreach ($collections as $collection)
+                        @if ($collection->id == $selectedCollection->id)
+                            <li class="active"><a href="">{{ $collection->name }}</a></li>
+                        @else
+                            <li class=""><a href="/gallery/{{ $collection->id }}">{{ $collection->name }}</a></li>
+                        @endif
+                    @endforeach
                 </ul>
             </div>
             <div class="top-nav">
                 <ul class="">
-                  <li class=""><a href="">previous work</a></li>
-                  <li class="active"><a href="">tree rings</a></li>
+                    @foreach ($collections as $collection)
+                        @if ($collection->id == $selectedCollection->id)
+                            <li class="active"><a href="">{{ $collection->name }}</a></li>
+                        @else
+                            <li class=""><a href="/gallery/{{ $collection->id }}">{{ $collection->name }}</a></li>
+                        @endif
+                    @endforeach
                 </ul>
             </div>
             <div class="track my-track">
               <div class="view-port">
                 <div class="slider-container">
                   <div class="item"></div>
-                  <div class="item item-0"><img class="" u="thumb" src="/images/gallery_sahara.jpg"></div>
-                  <div class="item item-1"><img class="desaturate" u="thumb" src="/images/gallery_india.jpg"></div>
-                  <div class="item item-2"><img class="desaturate" u="thumb" src="/images/gallery_white.jpg"></div>
-                  <div class="item item-3"><img class="desaturate" u="thumb" src="/images/gallery_morocco.jpg"></div>
-                  <div class="item item-4"><img class="desaturate" u="thumb" src="/images/gallery_berlin.jpg"></div>
-                  <div class="item item-5"><img class="desaturate" u="thumb" src="/images/gallery_atlas_mountains.jpg"></div>
-                  <div class="item item-6"><img class="desaturate" u="thumb" src="/images/gallery_vancouver.jpg"></div>
+                    @foreach ($selectedCollection->paintings as $painting)
+                        @if ($painting->position == 0)
+                            <div class="item item-{{ $painting->position }} active"><img class="" u="thumb" src="{{ $painting->url }}"></div>
+                        @else
+                            <div class="item item-{{ $painting->position }}"><img class="desaturate" u="thumb" src="{{ $painting->url }}"></div>
+                        @endif
+                    @endforeach
                 </div>
               </div>
               <div class="pagination">
@@ -48,62 +58,27 @@
               </div>
             </div>
             <div class="gallery-frame">
-                <div class="item item-0 active">
-                    <img src="/images/gallery_sahara.jpg">
-                    <div class="gallery-frame-details">
-                        <span class="gallery-details-name">SAHARA</span><span class="gallery-details-year">2015</span><br>
-                        <span class="gallery-details-description">acrylic and resin on wood</span><br>
-                        <span class="gallery-details-size"> 4' by 4'</span>
-                    </div>
-                </div>
-                <div class="item item-1">
-                    <img src="/images/gallery_india.jpg">
-                    <div class="gallery-frame-details">
-                        <span class="gallery-details-name">ANJUNA TEXTILE, INDIA</span><span class="gallery-details-year">2015</span><br>
-                        <span class="gallery-details-description">acrylic, gold leaf and resin on wood</span><br>
-                        <span class="gallery-details-size"> 4' by 4'</span>
-                    </div>
-                </div>
-                <div class="item item-2">
-                    <img src="/images/gallery_white.jpg">
-                    <div class="gallery-frame-details">
-                        <span class="gallery-details-name">FES TANNERIES SOUTH</span><span class="gallery-details-year">2015</span><br>
-                        <span class="gallery-details-description">acrylic and resin on wood</span><br>
-                        <span class="gallery-details-size"> 4' by 4'</span>
-                    </div>
-                </div>
-                <div class="item item-3">
-                    <img src="/images/gallery_morocco.jpg">
-                    <div class="gallery-frame-details">
-                        <span class="gallery-details-name">FES TANNERIES NORTH</span><span class="gallery-details-year">2015</span><br>
-                        <span class="gallery-details-description">acrylic and resin on wood</span><br>
-                        <span class="gallery-details-size"> 4' by 4'</span>
-                    </div>
-                </div>
-                <div class="item item-4">
-                    <img src="/images/gallery_berlin.jpg">
-                    <div class="gallery-frame-details">
-                        <span class="gallery-details-name">BERLIN WALL</span><span class="gallery-details-year">2015</span><br>
-                        <span class="gallery-details-description">acrylic and resin on wood</span><br>
-                        <span class="gallery-details-size"> 4' by 4'</span>
-                    </div>
-                </div>
-                <div class="item item-5">
-                    <img src="/images/gallery_atlas_mountains.jpg">
-                    <div class="gallery-frame-details">
-                        <span class="gallery-details-name">ATLAS MOUNTAINS</span><span class="gallery-details-year">2015</span><br>
-                        <span class="gallery-details-description">acrylic and resin on wood</span><br>
-                        <span class="gallery-details-size"> 4' by 4'</span>
-                    </div>
-                </div>
-                <div class="item item-6">
-                    <img src="/images/gallery_vancouver.jpg">
-                    <div class="gallery-frame-details">
-                        <span class="gallery-details-name">VANCOUVER'S WINTER</span><span class="gallery-details-year">2015</span><br>
-                        <span class="gallery-details-description">acrylic and resin on wood</span><br>
-                        <span class="gallery-details-size"> 4' by 4'</span>
-                    </div>
-                </div>
+                @foreach ($selectedCollection->paintings as $painting)
+                    @if ($painting->position == 0)
+                        <div class="item item-{{ $painting->position }} active">
+                            <img src="{{ $painting->url }}" data-zoom-image="{{ $painting->url }}">
+                            <div class="gallery-frame-details">
+                                <span class="gallery-details-name">{{ $painting->name }}</span><span class="gallery-details-year">{{ $painting->year }}</span><br>
+                                <span class="gallery-details-description">{{ $painting->description }}</span><br>
+                                <span class="gallery-details-size">{{ $painting->size }}</span>
+                            </div>
+                        </div>
+                    @else
+                        <div class="item item-{{ $painting->position }}">
+                            <img src="{{ $painting->url }}" data-zoom-image="{{ $painting->url }}">
+                            <div class="gallery-frame-details">
+                                <span class="gallery-details-name">{{ $painting->name }}</span><span class="gallery-details-year">{{ $painting->year }}</span><br>
+                                <span class="gallery-details-description">{{ $painting->description }}</span><br>
+                                <span class="gallery-details-size">{{ $painting->size }}</span>
+                            </div>
+                        </div>                    
+                    @endif
+                @endforeach
             </div>
         </div>
 
