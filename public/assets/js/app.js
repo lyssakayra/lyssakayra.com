@@ -1,6 +1,11 @@
-function resetFp(window) {
+function resetFp(window, zoom=null) {
     $(".body-container").hide();
-    if ($(window).height() < 600 || $(window).width() < 740) {
+    if ($(window).width() >= 770) {
+        if (zoom != null) {
+            zoom.elevateZoom({ zoomType   : "inner", cursor: "crosshair" });
+        }        
+    }
+    if ($(window).height() < 600 || $(window).width() < 770) {
         $(".body-container").show();
         return;
     }
@@ -14,8 +19,7 @@ function resetFp(window) {
 }
 $(window).load(function () {
     var zoom = $(".gallery-frame .active img");
-    zoom.elevateZoom({ zoomType   : "inner", cursor: "crosshair" });
-    resetFp(window); 
+    resetFp(window, zoom); 
     $('body').fadeIn(1000);
 
     var container = $(".my-track");
