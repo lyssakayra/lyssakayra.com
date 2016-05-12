@@ -47,6 +47,9 @@ Route::group(['middleware' => ['web']], function () {
             return view('contact');
         }]);    
         Route::post('contact_request','ContactController@getContactUsForm');        
+        Route::get('/news', 'NewsController@index');
+        Route::get('/news/{news_id}', 'NewsController@show');
+
     }
 
 });

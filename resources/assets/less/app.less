@@ -98,7 +98,12 @@
       .gallery-frame {
          max-width: 603px !important;
       }
-    } 
+    }
+    .news {
+      .articles {
+        margin-right: 20px !important;
+      }
+    }  
   }
 
 @media (max-width: 840px) {
@@ -116,7 +121,7 @@
       .gallery-frame {
          max-width: 530px !important;
       }
-    }    
+    }   
 }
 
 @media (max-width: 770px) {
@@ -189,7 +194,16 @@
       }
     }
   }
-
+  .news {
+    .articles {
+      margin-left: 20px !important;
+      .article {
+        img {
+          max-width: 100% !important;
+        }
+      }
+    }
+  }  
 }
 html,
 body {
@@ -237,6 +251,10 @@ img {
    }
    .header-contact {
       background-image: url('/images/contact_header_bg.jpg');
+      background-repeat: no-repeat;      
+   }
+   .header-news {
+      background-image: url('/images/news_header_bg.jpg');
       background-repeat: no-repeat;      
    }
    .header-container {
@@ -386,21 +404,24 @@ img {
       }  
    }
 }
-.footer {
-   position:absolute;
-   bottom: 0px;
-   left:0px;
-   width: 904px;
-   height: 45px;
-   background-image: url('/images/footer_bg.jpg');
-   background-repeat: no-repeat;
-   padding: 10px 20px;
-   p {
-      color: #999;
-      text-align: right;
-      line-height: 1.8;
-   }
+.gallery, .contact, .about {
+  .footer {
+     position:absolute;
+     bottom: 0px;
+     left:0px;
+     width: 904px;
+     height: 45px;
+     background-image: url('/images/footer_bg.jpg');
+     background-repeat: no-repeat;
+     padding: 10px 20px;
+     p {
+        color: #999;
+        text-align: right;
+        line-height: 1.8;
+     }
+  }  
 }
+
 .rotate-left {
    /* Safari */
    -webkit-transform: rotate(-90deg);
@@ -596,6 +617,35 @@ img {
         }
       }  
     }
+}
+
+.news {
+  .articles {
+    margin-left: 120px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    .article {
+      img {
+        max-width: 500px;
+        max-height: 100px;
+      }
+    }
+  }
+  .footer {
+      position:relative;
+      float: left;
+      left: 0px;
+      width: 904px;
+      height: 45px;
+      background-image: url('/images/footer_bg.jpg');
+      background-repeat: no-repeat;
+      padding: 10px 20px;
+      p {
+        color: #999;
+        text-align: right;
+        line-height: 1.8;
+      }
+   }
 }
 .body-container {
   background-image: url('/images/background_1.jpg');
