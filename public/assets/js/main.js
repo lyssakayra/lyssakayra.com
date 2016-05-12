@@ -1,4 +1,5 @@
 idleTimer = null;
+idleInterval = null;
 idleState = false;
 idleWait = 3000;
 
@@ -7,6 +8,7 @@ $(window).load(function () {
     $('*').bind('mousemove keydown scroll', function () {
         
         clearTimeout(idleTimer);
+        clearInterval(idleInterval);
 
         if (idleState == true) { 
             // Reactivated event
@@ -17,17 +19,21 @@ $(window).load(function () {
         
         idleTimer = setTimeout(function () {
             idleState = true; 
-            if ($(".active").length == 0) {
-                // Idle Event
-                showMenuItems();             
-            }
+            showMenuItems();
+            idleInterval = setInterval(function() { if (idleState && $(".active").length == 0) showMenuItems()}, 7000);
+            // if ($(".active").length == 0) {
+            //     // Idle Event
+            //     showMenuItems();             
+            // }
         }, idleWait);
     });
     
+    // setInterval(function() { if (idleState) showMenuItems()}, 7000);
+
     $("body").trigger("mousemove");
 
     function resetFp() {
-        $('body').hide();
+        // $('body').hide();
         $('.fp_sq_2').fadeOut();
 
         width = $(window).width();
@@ -118,6 +124,18 @@ $(window).load(function () {
 
     
     $(".fp_sq_1").mouseenter(function() {
+        $(this).addClass('active');
+        $(this).next().css({
+            'position':'absolute',
+            'top': $(this).offset().top,
+            'left': $(this).offset().left,
+            'height': $(this).height(),
+            'width': $(this).width()
+        });
+        $(this).next().fadeIn();
+      }
+    );
+    $(".fp_sq_1").click(function() {
         $(this).addClass('active');
         $(this).next().css({
             'position':'absolute',

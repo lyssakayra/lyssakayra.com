@@ -1,4 +1,4 @@
-function resetFp(window, zoom=null) {
+function resetFp(window, zoom) {
     $(".body-container").hide();
     if ($(window).width() >= 770) {
         if (zoom != null) {
@@ -10,6 +10,8 @@ function resetFp(window, zoom=null) {
         return;
     }
     bodyHeight = $(window).height() - 120 - 45;
+    bodyWidth = bodyHeight;
+    if (bodyWidth > 650) bodyWidth = 650;
     if ($(window).width() > 640) {
         $(".gallery .body-container .gallery-frame").css({'width': bodyHeight, 'height': bodyHeight});
     }
