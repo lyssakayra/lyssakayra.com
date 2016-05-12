@@ -30,9 +30,14 @@
     <script type="text/javascript" src="/assets/js/jquery.silver_track/src/plugins/jquery.silver_track.responsive_hub_connector.js" charset="utf-8"></script>
     <script type="text/javascript" src="/assets/js/jquery.silver_track/src/plugins/jquery.silver_track.css3_animation.js" charset="utf-8"></script>
     <script type="text/javascript" src="/assets/js/jquery.silver_track/src/plugins/jquery.silver_track.circular_navigator.js" charset="utf-8"></script>
-
+    <script type="text/javascript">
+    $(window).load(function() {
+        $(".loader").fadeOut("slow");
+    })
+    </script>
 </head>
 <body id="app-layout">
+    <div class="loader"></div>
     @yield('content')
 
     <!-- JavaScripts -->
