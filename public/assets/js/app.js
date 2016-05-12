@@ -22,7 +22,7 @@ function resetFp(window, zoom) {
 $(window).load(function () {
     var zoom = $(".gallery-frame .active img");
     resetFp(window, zoom); 
-    $('body').fadeIn(1000);
+    $('.main-container').fadeIn(1000);
 
     var container = $(".my-track");
     var track = container.find(".slider-container").silverTrack({

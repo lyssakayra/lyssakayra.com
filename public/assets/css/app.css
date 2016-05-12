@@ -162,9 +162,6 @@ body {
   height: 100%;
   font-family: "Palanquin", sans-serif;
 }
-body {
-  display: none;
-}
 .fp_sq_container div {
   display: none;
 }
@@ -177,6 +174,7 @@ img {
   max-width: 1024px;
   margin: auto;
   min-height: 100%;
+  display: none;
 }
 .header {
   max-width: 100%;
