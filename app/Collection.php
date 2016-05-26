@@ -23,6 +23,6 @@ class Collection extends Model
     protected $table = 'collections';
 
     public function paintings() {
-        return $this->hasMany('App\Painting');
+        return $this->hasMany('App\Painting')->orderBy('position');
     }
 }
