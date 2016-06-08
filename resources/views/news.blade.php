@@ -22,8 +22,16 @@
                 @foreach ($articles as $article)
                     <div class="article">
                         <img class="article-picture" src="{{ $article->picture_url }}">
-                        <h2> {{ $article->title }}</h2>
-                        {!! $article->body !!} <!--&nbsp; <a href="/news/{{ $article->id }}">Read more . . .</a> -->
+                        <h2><a class="article-title" href="/news/{{ $article->id }}">{{ $article->title }}</a></h2>
+                        <p>
+                            <span class="posted-date">Posted {!! $article->created_at->format('Y-m-d') !!}</span>
+                            @if ($article->is_new)
+                                <span class="article-new-tag">New</span>
+                            @endif
+                        </p>
+                        <div class="summary">
+                            {!! $article->summary !!} <a href="/news/{{ $article->id }}">Read more</a>
+                        </div>
                     </div>
                 @endforeach
             </div>

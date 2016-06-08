@@ -161,9 +161,6 @@
          background-color: #f2f2f2;
          height: auto !important;
          width: auto !important;
-         border-bottom-style: dashed;
-         border-bottom-width: 1px;
-         border-bottom-color: #d8d8d8;
          max-width: 770px !important;
          img {
             padding: 10px;
@@ -175,9 +172,10 @@
             padding: 3px 15px !important;
          }  
       }
-      .item {
+      .item:not(:last-child) {
           display: block !important;
-      }    
+          border-bottom: 1px dashed #d8d8d8;
+     }    
    }
    .track {
       display: none !important;
@@ -625,16 +623,45 @@ img {
 }
 
 .news {
+  .body-container {
+    background-image: url('/images/background_1.jpg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
   .articles {
     margin-left: 120px;
     margin-top: 20px;
     margin-bottom: 40px;
     .article {
+      padding: 20px 0px;
+      border-bottom: 1px dashed #d8d8d8;
       img {
         max-width: 500px;
-        max-height: 100px;
+        max-height: 200px;
+      }
+      .article-new-tag {
+        color: red;
+        font-style: italic;
+        font-weight: bold;
+        margin: 0px 5px;
+      }
+      .article-title {
+        color: #000;
+      }
+      .posted-date {
+        font-style: italic;
+        color: #999;
       }
     }
+  }
+  .single-article {
+    .article {
+      border-bottom: 0px;
+      img {
+          max-width: 100%;
+          max-height: 500px;     
+      }      
+    }   
   }
   .footer {
       position:relative;

@@ -18,10 +18,12 @@
         </div>
         <div class="body-container">
             <!-- <div class="left-nav"></div> -->
-            <div class="articles">
+            <div class="articles single-article">
+                    <a href="/news"> < Back to News </a>
                     <div class="article">
                         <img class="article-picture" src="{{ $article->picture_url }}">
                         <h2> {{ $article->title }}</h2>
+                        <p class="posted-date">Posted {!! $article->created_at->format('Y-m-d') !!}</p>
                         {!! $article->body !!}
                     </div>
             </div>

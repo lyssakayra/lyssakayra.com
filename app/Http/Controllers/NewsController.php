@@ -14,7 +14,7 @@ use Mail;
 class NewsController extends Controller
 {
     public function index() {
-        $articles = Article::all();
+        $articles = Article::orderBy('created_at', 'desc')->get();
         return \View::make('news', ['articles' => $articles]);        
     }
 
