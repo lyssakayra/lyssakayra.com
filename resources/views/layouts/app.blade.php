@@ -12,13 +12,9 @@
     {!! Meta::tag('robots') !!}
     {!! Meta::tag('description') !!}
     {!! Meta::tag('image') !!}
-    <!-- OG Tags --> 
-    {!! Meta::tag('og:title') !!} 
-    {!! Meta::tag('og:description') !!} 
-    {!! Meta::tag('og:image') !!} 
-    {!! Meta::tag('og:url') !!} 
-    {!! Meta::tag('og:type') !!} 
-    {!! Meta::tag('og:site_name') !!} 
+    {!! Meta::tag('url') !!} 
+    {!! Meta::tag('type') !!} 
+    {!! Meta::tag('site_name') !!} 
 
     
     <!-- Fonts -->
