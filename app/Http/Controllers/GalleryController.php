@@ -11,9 +11,7 @@ class GalleryController extends Controller
 {
     function show($collection_id = null){
         Meta::set('title', 'Gallery');
-        Meta::set('og:title', 'Gallery - Lyssa Kayra');
         Meta::set('image', 'http://lyssakayra.com/images/logo.jpg');
-        Meta::set('og:url', 'http://lyssakayra.com/gallery');
 
         $collections = \App\Collection::orderBy('position')->get();
         if ($collection_id) {
