@@ -12,9 +12,9 @@ class AboutController extends Controller
     function show() {
       Meta::set('title', 'About');
       Meta::set('og:title', 'About - Lyssa Kayra');
-      Meta::set('og:image', 'http://lyssakayra.com/images/lyssa_about.jpg');
+      Meta::set('image', 'http://lyssakayra.com/images/lyssa_about.jpg');
       Meta::set('og:url', 'http://lyssakayra.com/about');
-      
+
       return view('about');
     }
 }
