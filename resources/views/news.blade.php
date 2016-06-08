@@ -22,7 +22,7 @@
                 @foreach ($articles as $article)
                     <div class="article">
                         <img class="article-picture" src="{{ $article->picture_url }}">
-                        <h2><a class="article-title" href="/news/{{ $article->id }}">{{ $article->title }}</a></h2>
+                        <h2><a class="article-title" href="/news/{{ $article->slug }}">{{ $article->title }}</a></h2>
                         <p>
                             <span class="posted-date">Posted {!! $article->created_at->format('Y-m-d') !!}</span>
                             @if ($article->is_new)
@@ -30,7 +30,7 @@
                             @endif
                         </p>
                         <div class="summary">
-                            {!! $article->summary !!} <a href="/news/{{ $article->id }}">Read more</a>
+                            {!! $article->summary !!} <a href="/news/{{ $article->slug }}">Read more</a>
                         </div>
                     </div>
                 @endforeach

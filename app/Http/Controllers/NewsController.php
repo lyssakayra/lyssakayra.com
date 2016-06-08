@@ -19,7 +19,8 @@ class NewsController extends Controller
     }
 
     public function show($article_id) {
-        $article = Article::find($article_id);
+        $article = Article::getBySlug($article_id);
+        if (!$article) $article = Article::find($article_id);
         return \View::make('news_article', ['article' => $article]);        
     }
 } 
