@@ -9,9 +9,17 @@ use Input;
 use Validator;
 use Redirect;
 use Mail;
+use Meta;
 
 class ContactController extends Controller
 {
+    public function show() {
+        Meta::set('title','Contact');
+        Meta::set('og:title', 'Contact - Lyssa Kayra');
+        Meta::set('og:url', 'http://lyssakayra.com/contact');
+        
+        return view('contact');
+    }
     public function getContactUsForm(){
 
 

@@ -33,19 +33,11 @@ Route::group(['middleware' => ['web']], function () {
             return view('coming_soon');
         });        
     } else {
-        Route::get('/', function () {
-            return view('welcome');
-        });
-
-        Route::get('/about', function () {
-            return view('about');
-        });
-
+        Route::get('/', 'HomeController@show');
+        Route::get('/about', 'AboutController@show');
         Route::get('/gallery', 'GalleryController@show');
         Route::get('/gallery/{colleciton_id}', 'GalleryController@show');
-        Route::get('contact', ['as' => 'contact', function () {
-            return view('contact');
-        }]);    
+        Route::get('contact', ['as' => 'contact', 'uses' => 'ContactController@show']);    
         Route::post('contact_request','ContactController@getContactUsForm');        
         Route::get('/news', 'NewsController@index');
         Route::get('/news/{news_id}', 'NewsController@show');
