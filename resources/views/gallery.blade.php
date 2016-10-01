@@ -60,23 +60,15 @@
             <div class="gallery-frame">
                 @foreach ($selectedCollection->paintings as $painting)
                     @if ($painting->position == 0)
-                        <div class="item item-{{ $painting->position }} active">
-                            <img src="{{ $painting->url }}" data-zoom-image="{{ $painting->url }}">
-                            <div class="gallery-frame-details">
-                                <span class="gallery-details-name">{{ $painting->name }}</span><span class="gallery-details-year">{{ $painting->year }}</span><br>
-                                <span class="gallery-details-description">{{ $painting->description }}</span><br>
-                                <span class="gallery-details-size">{{ $painting->size }}</span>
-                            </div>
-                        </div>
+                        @include('gallery.gallery_frame', array(
+                            'painting' => $painting,
+                            'active' => 'active'
+                        ))
                     @else
-                        <div class="item item-{{ $painting->position }}">
-                            <img src="{{ $painting->url }}" data-zoom-image="{{ $painting->url }}">
-                            <div class="gallery-frame-details">
-                                <span class="gallery-details-name">{{ $painting->name }}</span><span class="gallery-details-year">{{ $painting->year }}</span><br>
-                                <span class="gallery-details-description">{{ $painting->description }}</span><br>
-                                <span class="gallery-details-size">{{ $painting->size }}</span>
-                            </div>
-                        </div>                    
+                        @include('gallery.gallery_frame', array(
+                            'painting' => $painting,
+                            'active' => ''
+                        ))                  
                     @endif
                 @endforeach
             </div>

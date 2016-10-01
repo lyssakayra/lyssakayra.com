@@ -23,6 +23,12 @@ function resetFp(window, zoom) {
     $(".body-container").show();
 
 }
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+
+
 $(window).load(function () {
     var zoom = $(".gallery-frame .active img");
     resetFp(window, zoom); 

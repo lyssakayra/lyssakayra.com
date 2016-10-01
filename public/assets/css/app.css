@@ -1,168 +1,3 @@
-@media (max-height: 600px) {
-  .footer {
-    position: relative !important;
-    float: left !important;
-    left: 0px !important;
-  }
-  .about .lyssa-pic {
-    height: 435px !important;
-  }
-  .about .left-nav {
-    height: 435px !important;
-  }
-  .body-container {
-    height: 100% !important;
-    overflow: hidden;
-  }
-  .gallery .gallery-frame {
-    height: 435px !important;
-    width: 435px !important;
-  }
-  .gallery .left-nav {
-    height: 435px !important;
-  }
-  .gallery .track {
-    margin-left: 125px;
-  }
-  .contact form {
-    height: 435px !important;
-  }
-  .contact .left-nav {
-    height: 435px !important;
-  }
-}
-@media (min-height: 750px) {
-  .track {
-    margin-left: 20px !important;
-  }
-}
-@media (min-height: 850px) {
-  .track {
-    margin-top: 150px !important;
-  }
-  .gallery .gallery-frame img {
-    margin-top: 10% !important;
-  }
-}
-@media (max-width: 1080px) {
-  .header-top-right {
-    display: none !important;
-  }
-  .header-container,
-  .body-container,
-  .footer {
-    max-width: 100% !important;
-  }
-}
-@media (max-width: 904px) {
-  .about .left-nav,
-  .contact .left-nav {
-    display: none !important;
-  }
-  .footer {
-    position: relative !important;
-    float: left !important;
-    left: 0px !important;
-  }
-  .about .body-container {
-    padding: 0px 20px;
-  }
-  .about .text-title {
-    font-size: 45px !important;
-  }
-  .contact .body-container form {
-    padding-right: 20px !important;
-  }
-  .contact .body-container .social-media {
-    padding-left: 20px !important;
-  }
-  .gallery .gallery-frame {
-    max-width: 603px !important;
-  }
-  .news .articles {
-    margin-right: 20px !important;
-  }
-}
-@media (max-width: 840px) {
-  .track {
-    margin-left: 20px !important;
-  }
-  .contact .body-container form {
-    width: 330px;
-  }
-  .gallery .gallery-frame {
-    max-width: 530px !important;
-  }
-}
-@media (max-width: 770px) {
-  .body-container {
-    height: auto !important;
-  }
-  .about .lyssa-pic {
-    margin: 15px auto !important;
-    width: 100% !important;
-    height: 420px !important;
-    text-align: center;
-  }
-  .about .text-title {
-    text-align: center !important;
-  }
-  .header-title {
-    font-size: 0.75em !important;
-  }
-  .header,
-  .header-container {
-    height: 80px !important;
-  }
-  .header-logo {
-    width: 90px !important;
-    height: 80px !important;
-  }
-  .gallery .left-nav {
-    display: none !important;
-  }
-  .gallery .top-nav {
-    display: block !important;
-  }
-  .gallery .gallery-frame {
-    background-image: none !important;
-    background-color: #f2f2f2;
-    height: auto !important;
-    width: auto !important;
-    max-width: 770px !important;
-  }
-  .gallery .gallery-frame img {
-    padding: 10px;
-    margin: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  .gallery .gallery-frame .gallery-frame-details {
-    padding: 3px 15px !important;
-  }
-  .gallery .item:not(:last-child) {
-    display: block !important;
-    border-bottom: 1px dashed #d8d8d8;
-  }
-  .track {
-    display: none !important;
-  }
-  .contact .body-container form {
-    padding: 20px;
-    float: left !important;
-    width: 100% !important;
-  }
-  .contact .body-container .social-media {
-    padding: 7px !important;
-    width: 100% !important;
-  }
-  .news .articles {
-    margin-left: 20px !important;
-  }
-  .news .articles .article img {
-    max-width: 100% !important;
-  }
-}
 html,
 body {
   margin: 0;
@@ -636,6 +471,187 @@ img {
   height: 100%;
   z-index: 9999;
   background: url('/images/page-loader.gif') 50% 50% no-repeat #f9f9f9;
+}
+.glyphicon.glyphicon-one-fine-dot {
+  float: right;
+  -webkit-transform: translateX(-400%);
+  transform: translateX(-400%);
+}
+.glyphicon.glyphicon-one-fine-dot:before {
+  content: "\25cf";
+  font-size: 2.5em;
+  color: #e40202;
+}
+@media (max-height: 600px) {
+  .footer {
+    position: relative !important;
+    float: left !important;
+    left: 0px !important;
+  }
+  .about .lyssa-pic {
+    height: 435px !important;
+  }
+  .about .left-nav {
+    height: 435px !important;
+  }
+  .body-container {
+    height: 100% !important;
+    overflow: hidden;
+  }
+  .gallery .gallery-frame {
+    height: 435px !important;
+    width: 435px !important;
+  }
+  .gallery .left-nav {
+    height: 435px !important;
+  }
+  .gallery .track {
+    margin-left: 125px;
+  }
+  .contact form {
+    height: 435px !important;
+  }
+  .contact .left-nav {
+    height: 435px !important;
+  }
+}
+@media (min-height: 750px) {
+  .track {
+    margin-left: 20px !important;
+  }
+}
+@media (min-height: 850px) {
+  .track {
+    margin-top: 150px !important;
+  }
+  .gallery .gallery-frame img {
+    margin-top: 10% !important;
+  }
+}
+@media (max-width: 1080px) {
+  .header-top-right {
+    display: none !important;
+  }
+  .header-container,
+  .body-container,
+  .footer {
+    max-width: 100% !important;
+  }
+}
+@media (max-width: 904px) {
+  .about .left-nav,
+  .contact .left-nav {
+    display: none !important;
+  }
+  .footer {
+    position: relative !important;
+    float: left !important;
+    left: 0px !important;
+  }
+  .about .body-container {
+    padding: 0px 20px;
+  }
+  .about .text-title {
+    font-size: 45px !important;
+  }
+  .contact .body-container form {
+    padding-right: 20px !important;
+  }
+  .contact .body-container .social-media {
+    padding-left: 20px !important;
+  }
+  .gallery .gallery-frame {
+    max-width: 603px !important;
+  }
+  .news .articles {
+    margin-right: 20px !important;
+  }
+}
+@media (max-width: 840px) {
+  .track {
+    margin-left: 20px !important;
+  }
+  .contact .body-container form {
+    width: 330px;
+  }
+  .gallery .gallery-frame {
+    max-width: 530px !important;
+  }
+}
+@media (max-width: 770px) {
+  .body-container {
+    height: auto !important;
+  }
+  .about .lyssa-pic {
+    margin: 15px auto !important;
+    width: 100% !important;
+    height: 420px !important;
+    text-align: center;
+  }
+  .about .text-title {
+    text-align: center !important;
+  }
+  .header-title {
+    font-size: 0.75em !important;
+  }
+  .header,
+  .header-container {
+    height: 80px !important;
+  }
+  .header-logo {
+    width: 90px !important;
+    height: 80px !important;
+  }
+  .gallery .left-nav {
+    display: none !important;
+  }
+  .gallery .top-nav {
+    display: block !important;
+  }
+  .gallery .gallery-frame {
+    background-image: none !important;
+    background-color: #f2f2f2;
+    height: auto !important;
+    width: auto !important;
+    max-width: 770px !important;
+  }
+  .gallery .gallery-frame img {
+    padding: 10px;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .gallery .gallery-frame .gallery-frame-details {
+    padding: 3px 15px !important;
+  }
+  .gallery .gallery-frame .gallery-frame-details .glyphicon.glyphicon-one-fine-dot {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  .gallery .item {
+    display: block !important;
+  }
+  .gallery .item:not(:last-child) {
+    border-bottom: 1px dashed #d8d8d8;
+  }
+  .track {
+    display: none !important;
+  }
+  .contact .body-container form {
+    padding: 20px;
+    float: left !important;
+    width: 100% !important;
+  }
+  .contact .body-container .social-media {
+    padding: 7px !important;
+    width: 100% !important;
+  }
+  .news .articles {
+    margin-left: 20px !important;
+  }
+  .news .articles .article img {
+    max-width: 100% !important;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
