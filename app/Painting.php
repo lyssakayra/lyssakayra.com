@@ -15,10 +15,20 @@ class Painting extends Model
         'collection_id', 'name', 'description', 'year', 'size', 'url', 'position',
     ];
 
+    protected $appends = [
+        'url_thumb'
+    ];
+
     /**
      * The database table used by the model.
      *
      * @var string
      */
     protected $table = 'paintings';
+
+    public function getUrlThumbAttribute() {
+        $ext = pathinfo($this->url, PATHINFO_EXTENSION);
+        return str_replace(".".$ext, "_thumb.".$ext, $this->url);
+
+    }
 }

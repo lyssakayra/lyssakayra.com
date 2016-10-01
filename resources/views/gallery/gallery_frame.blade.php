@@ -1,5 +1,5 @@
 <div class="item item-{{ $painting->position }} {{ $active }}">
-    <img src="{{ $painting->url }}" data-zoom-image="{{ $painting->url }}">
+    <img class="lazy" data-original="{{ $painting->url }}" data-zoom-image="{{ $painting->url }}" src="/images/page-loader.gif" width="640" height="480">
     <div class="gallery-frame-details">
         @if ($painting->sold)
             <span class="gallery-details-sold glyphicon glyphicon-one-fine-dot" data-toggle="tooltip" data-placement="bottom" title="Sold"></span>

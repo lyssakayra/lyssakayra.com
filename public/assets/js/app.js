@@ -25,11 +25,13 @@ function resetFp(window, zoom) {
 }
 
 $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip(); 
+
 });
 
 
 $(window).load(function () {
+    $('[data-toggle="tooltip"]').tooltip(); 
+    $("img.lazy").lazyload();
     var zoom = $(".gallery-frame .active img");
     resetFp(window, zoom); 
     $('.main-container').fadeIn(1000);
@@ -48,7 +50,7 @@ $(window).load(function () {
     }));
 
     track.start();
-
+    $(window).resize();
     $("a.next, a.prev").on('click', function() {
         // remove only the "zoom" elevateZoom
         zoom.data().elevateZoom.zoomContainer.remove(); //remove specific .zoomContainer
@@ -87,6 +89,7 @@ $(window).load(function () {
         }, 200)
         zoom = $(".gallery-frame .active img");
         zoom.elevateZoom({ zoomType   : "inner", cursor: "-webkit-zoom-in" });
+        $(window).resize();
     });
 
     $(window).on('resize', function(){

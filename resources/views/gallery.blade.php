@@ -45,9 +45,9 @@
                   <div class="item"></div>
                     @foreach ($selectedCollection->paintings as $painting)
                         @if ($painting->position == 0)
-                            <div class="item item-{{ $painting->position }} active"><img class="" u="thumb" src="{{ $painting->url }}"></div>
+                            <div class="item item-{{ $painting->position }} active"><img class="" u="thumb" src="{{ $painting->url_thumb }}"></div>
                         @else
-                            <div class="item item-{{ $painting->position }}"><img class="desaturate" u="thumb" src="{{ $painting->url }}"></div>
+                            <div class="item item-{{ $painting->position }}"><img class="desaturate" u="thumb" src="{{ $painting->url_thumb }}"></div>
                         @endif
                     @endforeach
                 </div>

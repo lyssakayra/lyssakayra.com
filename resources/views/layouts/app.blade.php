@@ -29,6 +29,7 @@
     <!-- Scripts -->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="/assets/js/jquery.elevateZoom-3.0.8.min.js"></script>
+    <script src="/assets/js/jquery-lazyload/jquery.lazyload.js"></script>
     <script type="text/javascript" src="/assets/js/jquery.silver_track/lib/jquery-easing-1.3.0.js"></script>
     <script type="text/javascript" src="/assets/js/jquery.silver_track/lib/modernizr.mediaqueries.transforms3d.js"></script>
     <script type="text/javascript" src="/assets/js/jquery.silver_track/lib/responsive-hub.js"></script>
