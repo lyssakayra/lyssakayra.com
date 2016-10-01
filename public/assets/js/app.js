@@ -31,7 +31,10 @@ $(document).ready(function(){
 
 $(window).load(function () {
     $('[data-toggle="tooltip"]').tooltip(); 
-    $("img.lazy").lazyload();
+    $("img.lazy").lazyload({
+             effect: "fadeIn",
+             effectspeed: 2000
+           });
     var zoom = $(".gallery-frame .active img");
     resetFp(window, zoom); 
     $('.main-container').fadeIn(1000);
