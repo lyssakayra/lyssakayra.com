@@ -33,7 +33,7 @@ $(window).load(function () {
     $('[data-toggle="tooltip"]').tooltip(); 
     $("img.lazy").lazyload({
              effect: "fadeIn",
-             effectspeed: 2000
+             effectspeed: 500
            });
     var zoom = $(".gallery-frame .active img");
     resetFp(window, zoom); 
