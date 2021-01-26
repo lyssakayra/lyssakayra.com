@@ -75,7 +75,7 @@
         </div>
 
         <div class="footer">
-            <p>&#169; 2016 Lyssa Kayra</p>
+            <p>&#169; 2021 Lyssa Kayra</p>
         </div>
     </div>
     
