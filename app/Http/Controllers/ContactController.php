@@ -15,7 +15,7 @@ class ContactController extends Controller
 {
     public function show() {
         Meta::set('title','Contact');
-        Meta::set('url', 'http://lyssakayra.com/contact');
+        Meta::set('url', 'https://lyssakayra.com/contact');
 
         return view('contact');
     }

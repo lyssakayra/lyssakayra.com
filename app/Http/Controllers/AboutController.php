@@ -11,8 +11,8 @@ class AboutController extends Controller
 {
     function show() {
       Meta::set('title', 'About');
-      Meta::set('image', 'http://lyssakayra.com/images/lyssa_about.jpg');
-      Meta::set('url', 'http://lyssakayra.com/about');
+      Meta::set('image', 'https://lyssakayra.com/images/lyssa_about.jpg');
+      Meta::set('url', 'https://lyssakayra.com/about');
 
       return view('about');
     }

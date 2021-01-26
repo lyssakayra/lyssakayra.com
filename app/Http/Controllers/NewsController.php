@@ -16,8 +16,8 @@ class NewsController extends Controller
 {
     public function index() {
         Meta::set('title', 'News');
-        Meta::set('image', 'http://lyssakayra.com/images/logo.jpg');
-        Meta::set('url', 'http://lyssakayra.com/news');
+        Meta::set('image', 'https://lyssakayra.com/images/logo.jpg');
+        Meta::set('url', 'https://lyssakayra.com/news');
 
         $articles = Article::orderBy('created_at', 'desc')->get();
         return view('news', ['articles' => $articles]);        
@@ -29,8 +29,8 @@ class NewsController extends Controller
 
         Meta::set('title', $article->title);
         Meta::set('description', $article->summary);
-        Meta::set('image', 'http://lyssakayra.com'.$article->picture_url);
-        Meta::set('url', 'http://lyssakayra.com/news/'.$article->slug);
+        Meta::set('image', 'https://lyssakayra.com'.$article->picture_url);
+        Meta::set('url', 'https://lyssakayra.com/news/'.$article->slug);
 
         return view('news_article', ['article' => $article]);        
     }
