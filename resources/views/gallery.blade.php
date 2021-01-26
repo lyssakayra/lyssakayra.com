@@ -6,7 +6,7 @@
         <div class="header">
             <div class="header-container header-gallery desaturate">
                 <div class="header-logo">
-                    <a class="" href="{{ url('/') }}">
+                    <a class="" href="/">
                         <img src="/images/logo_header.png">
                     </a>
                 </div>

@@ -5,7 +5,7 @@
         <div class="header">
             <div class="header-container header-about">
                 <div class="header-logo">
-                    <a class="" href="{{ url('/') }}">
+                    <a class="" href="/">
                         <img src="/images/logo_header.png">
                     </a>
 
